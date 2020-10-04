@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <style>
+    body {
+      background-color: brown;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      display: block;
+      background-color: white;
+      border-radius: 10px;
+      padding: 10px;
+      height: 350px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    .info {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+      height: 25px;
+      font-size: 18px;
+      padding: 5px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    input[type='submit'] {
+      width: 150px;
+      height: 50px;
+      background-color: brown;
+      color: white;
+      font-size: 18px;
+      opacity: 0.65;
+      transition: 0.35s;
+      border: none;
+      border-radius: 10px;
+    }
+    input[type='submit']:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+    #inner {
+      display: block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    h2 {
+      margin: 0;
+      margin-bottom: 0;
+      font-family: 'Arial';
+      font-size: 22px;
+    }
+    #return {
+      position: fixed;
+      color: red;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+  <body>
+    <div id='container'>
+      <div id='inner'>
+        <form action='/login' method='POST'>
+          <h2>Username</h2><br>
+          <input class='info' type='text' name='username'><br>
+          <h2>Password</h2><br>
+          <input class='info' type='password' name='password'><br>
+          <input type='submit' value='Submit'>
+        </form>
+        <h2 id='return'>{{return_info}}</h2>
+      </div>
+    </div>
+  </body>
+</html>
